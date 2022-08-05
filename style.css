@@ -2,6 +2,11 @@
 
 :root {
   --orange-color: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-Grey: hsl(217, 12%, 63%);
+  --medium-Grey: hsl(216, 12%, 54%);
+  --dark-Blue: hsl(214, 20%, 23%);
+  --very-Dark-Blue: hsl(216, 12%, 8%);
 }
 
 * {
@@ -12,14 +17,11 @@
 
 body {
   background: hsl(216, 12%, 8%);
-  justify-content: center;
-  align-items: center;
-  display: flex;
 }
 
 .container {
-  width: 70vh;
-  height: 70vh;
+  width: 400px;
+  height: 320px;
   right: 50px;
   color: white;
   border-radius: 5%;
@@ -27,15 +29,76 @@ body {
   font-family: Overpass, sans-serif;
   font-weight: 400;
   font-size: 15px;
+}
+
+.star img {
+  align-items: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: var(--dark-Blue);
+  padding: 12px;
+  border-radius: 100%;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 5%;
+}
+
+.mainText {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: hsl(217, 12%, 63%);
+}
+
+.ratings {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.numberOne,
+.numberTwo,
+.numberThree,
+.numberFour,
+.numberFive {
+  border-radius: 100%;
+  color: hsl(217, 12%, 63%);
+  background: var(--dark-Blue);
+  padding: 15px;
+  outline: none;
+  border: none;
+  margin-left: 21px;
+  margin-right: 21px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.numberOne:hover,
+.numberTwo:hover,
+.numberThree:hover,
+.numberFour:hover,
+.numberFive:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background: var(--orange-color);
+  color: var(white);
 }
 
 .submit {
-  font-size: 20px;
-  margin-top: 80%;
-  text-align: center;
+  display: flex;
   align-items: center;
-  margin-bottom: 5%;
+  justify-content: center;
+  margin-top: 20px;
   outline: none;
   border: none;
   background: var(--orange-color);
@@ -46,15 +109,19 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 25px;
-  display: flex;
-  justify-content: center;
   transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.submitText {
+  word-spacing: 50px;
 }
 
 .submit:hover {
   cursor: pointer;
-  transform: scale(0.95);
-  filter: brightness(0.8);
+  transform: scale(1.1);
+  background: var(--white);
+  color: var(--orange-color);
 }
 
 footer {
