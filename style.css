@@ -117,7 +117,7 @@ body {
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
-  word-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 .submit:hover {
