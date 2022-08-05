@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <script src="app.js" defer></script>
     <link
       rel="icon"
       type="image/png"
@@ -38,11 +38,11 @@
         appreciated to help us improve our offering!
       </div>
       <div class="ratings">
-        <button class="numberOne">1</button>
-        <button class="numberTwo">2</button>
-        <button class="numberThree">3</button>
-        <button class="numberFour">4</button>
-        <button class="numberFive">5</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
       </div>
       <button class="submit">SUBMIT</button>
 
@@ -58,11 +58,31 @@
       <!-- Thank you state end -->
     </div>
 
+    <div class="secondContainer">
+      <div class="phone">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="phone"
+          aria-hidden="true"
+        />
+      </div>
+
+      <div class="selectedRatings">
+        You selected <span class="rate"></span> out of 5
+      </div>
+
+      <div class="secondTitle">Thank you!</div>
+      <div class="secondText">
+        We appreciate you taking the time to give a rating. you ever need more
+        support, don’t hesitate to get in touch!
+      </div>
+    </div>
+
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">SCREECH115</a>.
+      >. Coded by <a href="https://github.com/SCREECH115">SCREECH115</a>.
     </footer>
   </body>
 </html>

@@ -29,6 +29,10 @@ body {
   font-family: Overpass, sans-serif;
   font-weight: 400;
   font-size: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .star img {
@@ -56,21 +60,18 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   color: hsl(217, 12%, 63%);
+  line-height: 20px;
 }
 
 .ratings {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 20px;
 }
 
-.numberOne,
-.numberTwo,
-.numberThree,
-.numberFour,
-.numberFive {
+.number {
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -84,27 +85,26 @@ body {
   padding: 15px;
   outline: none;
   border: none;
-  margin-right: 22px;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
 }
 
-.numberOne:hover,
-.numberTwo:hover,
-.numberThree:hover,
-.numberFour:hover,
-.numberFive:hover {
+.number:hover {
   cursor: pointer;
   transform: scale(1.1);
   color: var(--white);
   background: var(--orange-color);
 }
 
+.number.active {
+  background: var(--medium-Grey);
+  color: var(--white);
+}
+
 .submit {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
   outline: none;
   border: none;
   background: var(--orange-color);
@@ -112,12 +112,13 @@ body {
   font-size: 14px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
   letter-spacing: 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 90%;
 }
 
 .submit:hover {
@@ -135,4 +136,61 @@ footer {
   width: 100%;
   text-align: center;
   position: fixed;
+}
+
+.secondContainer {
+  display: none;
+  width: 350px;
+  height: 350px;
+  right: 50px;
+  color: white;
+  border-radius: 5%;
+  background: hsl(213, 19%, 18%);
+  font-family: Overpass, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.phone {
+  margin-top: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectedRatings {
+  display: flex;
+  justify-content: space-evenly;
+  background: var(--dark-Blue);
+  color: var(--orange-color);
+  font-size: 13px;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 0 25%;
+  margin-top: 25px;
+}
+
+.selectedRatings > .rate {
+  margin: 0 -10px;
+  font-weight: bold;
+}
+
+.secondTitle {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.secondText {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  color: hsl(217, 12%, 63%);
 }
